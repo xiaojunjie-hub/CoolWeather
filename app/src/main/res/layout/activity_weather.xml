@@ -11,19 +11,6 @@
         android:id="@+id/swipe_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-    <!-- 通过滚动方式查看屏幕以外内容 -->
-    <ImageView
-        android:id="@+id/bing_pic_img"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop" />
-    <ScrollView
-        android:id="@+id/weather_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none"
-        android:overScrollMode="never">
         <!-- 引入之前定义的所有布局 -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +23,19 @@
             <include layout="@layout/aqi"/>
             <include layout="@layout/suggestion"/>
         </LinearLayout>
-    </ScrollView>
+        <ImageView
+            android:id="@+id/bing_pic_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+        <!-- 通过滚动方式查看屏幕以外内容 -->
+        <ScrollView
+            android:id="@+id/weather_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+        </ScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
         <fragment
             android:id="@+id/choose_area_fragment"
@@ -44,5 +43,6 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:layout_gravity="start"/>
+
     </androidx.drawerlayout.widget.DrawerLayout>
 </FrameLayout>
