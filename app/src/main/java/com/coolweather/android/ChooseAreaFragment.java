@@ -36,7 +36,7 @@ import okhttp3.Response;
 
 public class ChooseAreaFragment extends Fragment {
     /**
-     * 宏定义试图的不同级别
+     * 宏定义试图的不同级别1
      */
     public static final int LEVEL_PROVINCE = 0;
     public static final int LEVEL_CITY = 1;
