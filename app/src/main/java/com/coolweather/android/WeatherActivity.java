@@ -137,6 +137,13 @@ public class WeatherActivity extends AppCompatActivity {
                                     .getDefaultSharedPreferences(WeatherActivity.this).edit();
                             editor.putString("weather",responseText);
                             editor.apply();
+
+                            Toast toast = Toast.makeText(WeatherActivity.this, "获取天气信息成功", Toast.LENGTH_SHORT);// 显示时间也可以是数字
+                            LinearLayout toastLayout = (LinearLayout) toast.getView();
+                            ImageView imageView = new ImageView(WeatherActivity.this);
+                            imageView.setImageResource(R.drawable.turet);
+                            toastLayout.addView(imageView, 0);// 0 图片在文字的上方 ， 1 图片在文字的下方
+                            toast.show();
                             showWeatherInfo(weather); // 显示内容
                         }else{
                             Toast.makeText(WeatherActivity.this, "获取天气信息失败", Toast.LENGTH_SHORT).show();
