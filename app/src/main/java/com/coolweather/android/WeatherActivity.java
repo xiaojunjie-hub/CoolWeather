@@ -171,7 +171,7 @@ public class WeatherActivity extends AppCompatActivity {
     private void showWeatherInfo(Weather weather){
         // 从Weather对象中获取数据
         String cityName = weather.basic.cityName;
-        String updateTime = weather.basic.update.updateTime.split(" ")[1]; //按24小时计时的时间
+        String updateTime = weather.basic.update.updateTime.split(" ")[1]; //按24小时计时时间
         String degree = weather.now.temperature + "°C";
         String weatherInfo = weather.now.more.info;
         // 将数据显示到对应控件上
